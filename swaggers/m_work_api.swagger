@@ -1,0 +1,1332 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MWorkAPI",
+    "version": "v1"
+  },
+  "paths": {
+    "/Order/textTypes": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringInt32IDictionaryResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringInt32IDictionaryResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringInt32IDictionaryResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/texts": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "txtTp",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/TextTp"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TxtIEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TxtIEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TxtIEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/units": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnitIEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnitIEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnitIEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/products": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdIEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdIEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdIEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/products/{prodNo}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "prodNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/offices": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/R10IEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R10IEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R10IEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/offices/{rNo}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "rNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/R10IEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R10IEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R10IEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/sections": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "r10",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/R1IEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R1IEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R1IEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/sections/{rNo}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "rNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/R1Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R1Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/R1Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/customers/{custNo}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "custNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorCustomerResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorCustomerResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorCustomerResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/actors/{actNo}/deliveryAddresses": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "actNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorDeliveryAddressIEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorDeliveryAddressIEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorDeliveryAddressIEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/actors/{actNo}/contactPersons": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "actNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorContactPersonIEnumerableResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorContactPersonIEnumerableResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorContactPersonIEnumerableResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Order/firms/{frmNo}/offices/{r10}/work": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "frmNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "r10",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActorContactPerson": {
+        "type": "object",
+        "properties": {
+          "actNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "custNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad1": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad2": {
+            "type": "string",
+            "nullable": true
+          },
+          "pNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "pArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobPh": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActorContactPersonIEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActorContactPerson"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActorCustomer": {
+        "type": "object",
+        "properties": {
+          "actNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "custNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ctry": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad1": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad2": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad4": {
+            "type": "string",
+            "nullable": true
+          },
+          "pNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "pArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobPh": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAd": {
+            "type": "string",
+            "nullable": true
+          },
+          "crSusp": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActorCustomerResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ActorCustomer"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActorDeliveryAddress": {
+        "type": "object",
+        "properties": {
+          "actNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ctry": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad1": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad2": {
+            "type": "string",
+            "nullable": true
+          },
+          "ad4": {
+            "type": "string",
+            "nullable": true
+          },
+          "pNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "pArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobPh": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActorDeliveryAddressIEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActorDeliveryAddress"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActorEmployee": {
+        "type": "object",
+        "properties": {
+          "actNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "empNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "r10": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Ord": {
+        "type": "object",
+        "properties": {
+          "ordNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "r1": {
+            "type": "string",
+            "nullable": true
+          },
+          "r2": {
+            "type": "string",
+            "nullable": true
+          },
+          "r10": {
+            "type": "string",
+            "nullable": true
+          },
+          "r11": {
+            "type": "string",
+            "nullable": true
+          },
+          "empNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rsp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "custNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ctry": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "delAd1": {
+            "type": "string",
+            "nullable": true
+          },
+          "delAd2": {
+            "type": "string",
+            "nullable": true
+          },
+          "delAd4": {
+            "type": "string",
+            "nullable": true
+          },
+          "delPArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "cfDelDt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gr2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gr6": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ourRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "yrRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "csOrdNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "label": {
+            "type": "string",
+            "nullable": true
+          },
+          "inf": {
+            "type": "string",
+            "nullable": true
+          },
+          "inf2": {
+            "type": "string",
+            "nullable": true
+          },
+          "inf3": {
+            "type": "string",
+            "nullable": true
+          },
+          "inf4": {
+            "type": "string",
+            "nullable": true
+          },
+          "inf5": {
+            "type": "string",
+            "nullable": true
+          },
+          "inf6": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrdLn": {
+        "type": "object",
+        "properties": {
+          "ordNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prodNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descr": {
+            "type": "string",
+            "nullable": true
+          },
+          "r1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cfDelDt": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Prod": {
+        "type": "object",
+        "properties": {
+          "prodNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descr": {
+            "type": "string",
+            "nullable": true
+          },
+          "prodTp3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prodGr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prodPrG2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stSaleUn": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "webPg2": {
+            "type": "string",
+            "nullable": true
+          },
+          "r3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "r4": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "procMt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "excPrint": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "editPref": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "edFmt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "specFunc": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProdIEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Prod"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProdResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/Prod"
+          }
+        },
+        "additionalProperties": false
+      },
+      "R1": {
+        "type": "object",
+        "properties": {
+          "rNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "r10": {
+            "type": "string",
+            "nullable": true
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "R10": {
+        "type": "object",
+        "properties": {
+          "rNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nm": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "R10IEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/R10"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "R1IEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/R1"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "R1Result": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/R1"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringInt32IDictionaryResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TextTp": {
+        "enum": [
+          16,
+          21
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Txt": {
+        "type": "object",
+        "properties": {
+          "txtNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "txt": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TxtIEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Txt"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Unit": {
+        "type": "object",
+        "properties": {
+          "un": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnitIEnumerableResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Unit"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Work": {
+        "type": "object",
+        "properties": {
+          "ords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ord"
+            },
+            "nullable": true
+          },
+          "ordLns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrdLn"
+            },
+            "nullable": true
+          },
+          "r1s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/R1"
+            },
+            "nullable": true
+          },
+          "actorCustomers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActorCustomer"
+            },
+            "nullable": true
+          },
+          "actorEmployees": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActorEmployee"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WorkResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/Work"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
