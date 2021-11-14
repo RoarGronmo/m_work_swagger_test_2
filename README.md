@@ -40,6 +40,6 @@ targets:
 Note: In AS2020.3.1 you will receive a warning/error that the `targets:` section is not allowed here...
 
 7. Do a "pub get" in the pubspec.yaml file (shortcut at the top if you have configured dart right).
-8. Open an powershell and navigate to your project path
+8. Open a powershell and navigate to your project path
 9. Run following command `flutter pub run build_runner build --delete-conflicting-outputs`
 10. The build fails...
