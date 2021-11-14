@@ -13,7 +13,7 @@ A simple test testing `swagger_dart_code_generator 2.2.5+1`
   chopper: ^4.0.3
   json_annotation: ^4.3.0
 ```
-5. Add under `dev.dependencies:` in `pubspec.yaml` file:
+5. Add under `dev_dependencies:` in `pubspec.yaml` file:
 ```
   #---swagger changes---
   build_runner: ^2.1.5
