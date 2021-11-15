@@ -3,11 +3,12 @@ targets:
     sources:
       - swaggers/**
       - lib/**
+      - $package$
     builders:
       chopper_generator:
         options:
           header: "//Generated code"
       swagger_dart_code_generator:
         options:
-          input_folder: "lib/"
+          input_folder: "swaggers/"
           output_folder: "lib/swagger_generated_code"
