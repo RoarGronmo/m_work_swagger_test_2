@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:chopper/chopper.dart';
 import 'package:chopper/chopper.dart' as chopper;
 import 'm_work_api.enums.swagger.dart' as enums;
+import 'm_work_api.enums.swagger.dart';
 export 'm_work_api.enums.swagger.dart';
 
 part 'm_work_api.swagger.chopper.dart';
